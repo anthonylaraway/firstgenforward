@@ -1,18 +1,7 @@
-# Things that need to be done to run the frontend:  
-1. Install Node.js  
-2. `npm i` in the root directory  
-3. `npm i react-router-dom `
-4. `npm install react-bootstrap bootstrap`
-5. `npm i js-cookie`
-6. `npm i @uiw/react-md-editor`
-7. `npm i --save-dev dotenv`
-8. `npm i @chatscope/chat-ui-kit-react`
-9. `npm i @chatscope/chat-ui-kit-styles`
-10. `npm i react-pdftotext`
-11. `npm run dev`
+# FirstGenForward SWE Capstone Project Backend
+The backend that I wrote 100% of for a school project.
 
-If you are on MacOS:
-`npm i @rollup/rollup-darwin-arm64`
+The backend is written with go, and the database is built locally using mysql with the .sql file. A package called gin is used to simplify http handling. Business logic for endpoints can be found in the handler folder!
 
 # Connecting with Config
 
