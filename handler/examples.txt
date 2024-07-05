@@ -1,0 +1,132 @@
+After logging in, POST to localhost:8080/comment
+Example comment request body:
+{
+    "post_id":"acfa0103-9a30-4c75-8de5-0c5ec13e5d0b",
+    "text":"hello"
+}
+
+GET from localhost:8080/forumpage
+Example forum home page response body:
+{
+    "error": "",
+    "posts": [
+        {
+            "post_id": "69088a97-b37a-4bd7-a5e0-df486656a888",
+            "title": "Interested in AI",
+            "author": "Zarina",
+            "last_updated": "2024-03-17T14:20:00Z",
+            "tags": [
+                {
+                    "tag": "Applying to Schools",
+                    "color": "#ccc041"
+                },
+                {
+                    "tag": "AI",
+                    "color": "#b23ac2"
+                }
+            ]
+        },
+        {
+            "post_id": "acfa0103-9a30-4c75-8de5-0c5ec13e5d0b",
+            "title": "How is the CS program at VT?",
+            "author": "real paul rudd",
+            "last_updated": "2024-03-17T09:15:00Z",
+            "tags": [
+                {
+                    "tag": "Virginia Tech",
+                    "color": "#c25f02"
+                },
+                {
+                    "tag": "Computer Science",
+                    "color": "#30e004"
+                }
+            ]
+        }
+    ]
+}
+
+GET from localhost:8080/forum/:id
+Example get forum post response body:
+{
+    "error": "",
+    "post_id": "acfa0103-9a30-4c75-8de5-0c5ec13e5d0b",
+    "title": "How is the CS program at VT?",
+    "author": "real paul rudd",
+    "user_id": "03057324-6eee-11ee-95c8-96fc48e250ac",
+    "created_at": "2024-03-15T10:30:00Z",
+    "text": "Hello I am paul rudd and I am curious about the computer science program at VT. If there are any CS majors that study or studied at VT could you tell me about the program? \nWhat are the hardest classes? What do you study?",
+    "comments": [
+        {
+            "id": "de0e7178-1fee-4fb5-92ff-6c6029671207",
+            "text": "I'm a CS major at VT and I enjoy it. \nThe hardest and most infamous class is called systems, and it has a heavy focus on lower level programming. I'd say that's actually a theme of VT CS classes. \nThere's a focus on lower level programming overall (not that there arent classes with different focuses)",
+            "author": "MinecraftCreeper55",
+            "user_id": "09112b8c-6eed-11ee-95c8-96fc48e250ac",
+            "created_at": "2024-03-17T09:15:00Z"
+        }
+    ],
+    "tags": [
+        {
+            "tag": "Computer Science",
+            "color": "#30e004"
+        },
+        {
+            "tag": "Virginia Tech",
+            "color": "#c25f02"
+        }
+    ]
+}
+
+POST to localhost:8080/forum
+Example create new forum post request body:
+{
+    "text":"Hi chat this is a new forum post. This is the request body :)",
+    "title":"MY POST TITLE",
+    "tags": [
+        "real",
+        "true"
+    ]
+}
+
+GET from localhost:8080/tags
+Example get tags response body:
+{
+    "error": "",
+    "tags": [
+        {
+            "tag": "Computer Science",
+            "color": "#30e004"
+        },
+        {
+            "tag": "AI",
+            "color": "#b23ac2"
+        },
+        {
+            "tag": "Virginia Tech",
+            "color": "#c25f02"
+        },
+        {
+            "tag": "Applying to Schools",
+            "color": "#ccc041"
+        }
+    ]
+}
+
+GET from localhost:8080/chat/a4af7e4b-4f65-443d-b408-a1bd61eed098
+Example response body:
+{
+    "me": "real paul rudd",
+    "friend": "Zarina",
+    "room_id": "a4af7e4b-4f65-443d-b408-a1bd61eed098",
+    "messages": [
+        {
+            "sender": "Zarina",
+            "message": "Hi Paul",
+            "created_at": "2024-03-17T14:19:00Z"
+        },
+        {
+            "sender": "real paul rudd",
+            "message": "Whats up?",
+            "created_at": "2024-03-17T14:20:00Z"
+        }
+    ]
+}
